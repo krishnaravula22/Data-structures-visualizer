@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Linked List Visualizer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-link"></i>
+
+<span>
+
+Linked List Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="number"
+id="nodeValue"
+placeholder="Node Value">
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+Linked List
+
+<span>
+
+Visualizer
+
+</span>
+
+</h1>
+
+<p>
+
+Visualize every Linked List operation
+with smooth animations and understand
+how nodes are connected.
+
+</p>
+
+</section>
+
+<section class="control-panel">
+
+<input
+type="number"
+id="position"
+placeholder="Position">
+
+<button onclick="insertBeginning()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Insert First
+
+</button>
+
+<button onclick="insertEnd()">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Insert Last
+
+</button>
+
+<button onclick="insertPosition()">
+
+<i class="fa-solid fa-plus"></i>
+
+Insert Position
+
+</button>
+
+<button onclick="deleteNode()">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete
+
+</button>
+
+<button onclick="updateNode()">
+
+<i class="fa-solid fa-pen"></i>
+
+Update
+
+</button>
+
+<button onclick="searchNode()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+<button onclick="reverseList()">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+Reverse
+
+</button>
+
+<button onclick="traverseList()">
+
+<i class="fa-solid fa-forward"></i>
+
+Traverse
+
+</button>
+
+<button onclick="clearList()">
+
+<i class="fa-solid fa-broom"></i>
+
+Clear
+
+</button>
+
+</section>
+
+<div
+class="status"
+id="status">
+
+Linked List Ready...
+
+</div>
+
+<section class="visualizer">
+
+<div
+class="linkedlist-container"
+id="linkedListContainer">
+
+</div>
+
+</section>
+
+<section class="complexity">
+
+<h2>
+
+Time Complexity
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Operation</th>
+
+<th>Best</th>
+
+<th>Average</th>
+
+<th>Worst</th>
+
+</tr>
+
+<tr>
+
+<td>Insertion</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Deletion</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Search</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Traversal</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select any operation...
+
+</pre>
+
+</section>
+
+<!--================ NAVIGATION =================-->
+
+<section class="container center mt-40">
+
+    <a href="linear.html">
+
+        <button>
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="../index.html">
+
+        <button>
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </button>
+
+    </a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <div class="container">
+
+        <h2 class="glow">
+
+            Linked List Visualizer
+
+        </h2>
+
+        <p>
+
+            Learn Linked Lists through
+            interactive animations.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Singly Linked List Operations
+
+        </p>
+
+        <br>
+
+        <p>
+
+            © 2026 Data Structures Visualizer
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ JAVASCRIPT =================-->
+
+<script src="../js/linkedlist.js"></script>
+
+</body>
+
+</html>

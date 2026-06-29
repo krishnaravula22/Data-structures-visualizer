@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Binary Search Tree Visualizer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ BACKGROUND =================-->
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!--================ NAVBAR =================-->
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-tree"></i>
+
+<span>
+
+Binary Search Tree Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="number"
+id="treeValue"
+placeholder="Enter Node">
+
+</div>
+
+</div>
+
+</nav>
+
+<!--================ HERO =================-->
+
+<section class="hero">
+
+<h1>
+
+Binary Search
+
+<span>
+
+Tree
+
+</span>
+
+</h1>
+
+<p>
+
+Visualize every BST operation
+with smooth animations,
+live traversals,
+and complexity analysis.
+
+</p>
+
+</section>
+
+<!--================ CONTROLS =================-->
+
+<section class="control-panel">
+
+<button onclick="insertNode()">
+
+<i class="fa-solid fa-plus"></i>
+
+Insert
+
+</button>
+
+<button onclick="deleteNode()">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete
+
+</button>
+
+<button onclick="searchNode()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+<button onclick="inorderTraversal()">
+
+<i class="fa-solid fa-arrow-down"></i>
+
+Inorder
+
+</button>
+
+<button onclick="preorderTraversal()">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Preorder
+
+</button>
+
+<button onclick="postorderTraversal()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Postorder
+
+</button>
+
+<button onclick="levelOrderTraversal()">
+
+<i class="fa-solid fa-layer-group"></i>
+
+Level Order
+
+</button>
+
+<button onclick="treeHeight()">
+
+<i class="fa-solid fa-ruler-vertical"></i>
+
+Height
+
+</button>
+
+<button onclick="leafNodes()">
+
+<i class="fa-solid fa-leaf"></i>
+
+Leaf Nodes
+
+</button>
+
+<button onclick="clearTree()">
+
+<i class="fa-solid fa-broom"></i>
+
+Clear
+
+</button>
+
+</section>
+
+<!--================ STATUS =================-->
+
+<div
+class="status"
+id="status">
+
+Tree Ready...
+
+</div>
+
+<!--================ TREE =================-->
+
+<section class="visualizer">
+
+<div
+id="treeContainer"
+class="tree-container">
+
+</div>
+
+</section>
+
+<!--================ TRAVERSAL =================-->
+
+<section class="container">
+
+<h2 class="section-title">
+
+Traversal
+
+<span>
+
+Output
+
+</span>
+
+</h2>
+
+<div
+class="status"
+id="traversalOutput">
+
+Output will appear here...
+
+</div>
+
+</section>
+
+<!--================ COMPLEXITY =================-->
+
+<section class="complexity">
+
+<h2>
+
+Time Complexity
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Operation</th>
+
+<th>Average</th>
+
+<th>Worst</th>
+
+</tr>
+
+<tr>
+
+<td>Search</td>
+
+<td>O(log n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Insert</td>
+
+<td>O(log n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Delete</td>
+
+<td>O(log n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Traversal</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!--================ CODE =================-->
+
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select any Tree operation...
+
+</pre>
+
+</section>
+
+
+<!--================ NAVIGATION =================-->
+
+<section class="container center mt-40">
+
+    <a href="nonlinear.html">
+
+        <button>
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="../index.html">
+
+        <button>
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </button>
+
+    </a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <div class="container">
+
+        <h2 class="glow">
+
+            Binary Search Tree Visualizer
+
+        </h2>
+
+        <p>
+
+            Learn Trees with step-by-step animations.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            BST Operations: Insert • Delete • Search • Traverse
+
+        </p>
+
+        <br>
+
+        <p>
+
+            © 2026 Data Structures Visualizer
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ JAVASCRIPT =================-->
+
+<script src="../js/tree.js"></script>
+
+</body>
+
+</html>

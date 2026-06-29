@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Graph Visualizer</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- NAVBAR -->
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-share-nodes"></i>
+
+<span>Graph Visualizer</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input type="text"
+id="nodeInput"
+placeholder="Node (A, B, C...)">
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>
+
+Graph
+
+<span>Visualizer</span>
+
+</h1>
+
+<p>
+Create nodes, connect edges, and visualize BFS & DFS traversal step by step.
+</p>
+
+</section>
+
+<!-- CONTROL PANEL -->
+<section class="control-panel">
+
+<input type="text" id="fromNode" placeholder="From Node">
+<input type="text" id="toNode" placeholder="To Node">
+
+<button onclick="addNode(document.getElementById('nodeInput').value)">
+<i class="fa-solid fa-circle-plus"></i> Add Node
+</button>
+
+<button onclick="addEdge(
+document.getElementById('fromNode').value,
+document.getElementById('toNode').value
+)">
+<i class="fa-solid fa-link"></i> Add Edge
+</button>
+
+<button onclick="bfs(document.getElementById('nodeInput').value)">
+<i class="fa-solid fa-water"></i> BFS
+</button>
+
+<button onclick="dfs(document.getElementById('nodeInput').value)">
+<i class="fa-solid fa-tree"></i> DFS
+</button>
+
+</section>
+
+<!-- STATUS -->
+<div class="status" id="status">
+Graph Ready...
+</div>
+
+<!-- GRAPH VISUALIZER -->
+<section class="visualizer">
+
+<div id="graphContainer" class="graph-container"></div>
+
+</section>
+
+<!-- COMPLEXITY -->
+<section class="complexity">
+
+<h2>Graph Complexity</h2>
+
+<table>
+
+<tr>
+<th>Operation</th>
+<th>Time</th>
+</tr>
+
+<tr>
+<td>Add Node</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Add Edge</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>BFS</td>
+<td>O(V + E)</td>
+</tr>
+
+<tr>
+<td>DFS</td>
+<td>O(V + E)</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- CODE BOX -->
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select Graph Operation...
+
+</pre>
+
+</section>
+
+<!-- SCRIPT -->
+<script src="../js/graph.js"></script>
+
+</body>
+
+</html>

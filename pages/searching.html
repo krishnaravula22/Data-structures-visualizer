@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Searching Visualizer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ BACKGROUND =================-->
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!--================ NAVBAR =================-->
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<span>
+
+Searching Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="number"
+id="searchValue"
+placeholder="Enter Value">
+
+</div>
+
+</div>
+
+</nav>
+
+<!--================ HERO =================-->
+
+<section class="hero">
+
+<h1>
+
+Searching
+
+<span>
+
+Algorithms
+
+</span>
+
+</h1>
+
+<p>
+
+Visualize Linear Search and Binary Search
+step by step with highlighted comparisons.
+
+</p>
+
+</section>
+
+<!--================ CONTROL PANEL =================-->
+
+<section class="control-panel">
+
+<button onclick="linearSearch()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Linear Search
+
+</button>
+
+<button onclick="binarySearch()">
+
+<i class="fa-solid fa-binary"></i>
+
+Binary Search
+
+</button>
+
+<button onclick="generateArray()">
+
+<i class="fa-solid fa-dice"></i>
+
+Generate Array
+
+</button>
+
+<button onclick="resetArray()">
+
+<i class="fa-solid fa-broom"></i>
+
+Reset
+
+</button>
+
+</section>
+
+<!--================ STATUS =================-->
+
+<div class="status" id="status">
+
+Searching Ready...
+
+</div>
+
+<!--================ VISUALIZER =================-->
+
+<section class="visualizer">
+
+<div id="searchContainer"></div>
+
+</section>
+
+<!--================ COMPLEXITY =================-->
+
+<section class="complexity">
+
+<h2>Time Complexity</h2>
+
+<table>
+
+<tr>
+<th>Algorithm</th>
+<th>Best</th>
+<th>Average</th>
+<th>Worst</th>
+</tr>
+
+<tr>
+<td>Linear Search</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Binary Search</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+</tr>
+
+</table>
+
+</section>
+
+<!--================ CODE =================-->
+
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select a searching algorithm...
+
+</pre>
+
+</section>
+
+<!--================ SCRIPT =================-->
+
+<script src="../js/searching.js"></script>
+
+</body>
+
+</html>

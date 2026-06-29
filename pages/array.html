@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Array Visualizer</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ BACKGROUND ================-->
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!--================ NAVBAR ================-->
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-table-cells-large"></i>
+
+<span>
+
+Array Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search Operation..."
+id="searchOperation">
+
+</div>
+
+</div>
+
+</nav>
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+<h1>
+
+Array
+
+<span>
+
+Visualizer
+
+</span>
+
+</h1>
+
+<p>
+
+Perform every Array operation
+step by step with animations,
+complexity analysis,
+and source code implementation.
+
+</p>
+
+</section>
+
+<!--================ CONTROL PANEL ================-->
+
+<section class="control-panel">
+
+<input
+type="number"
+id="arrayValue"
+placeholder="Value">
+
+<input
+type="number"
+id="arrayIndex"
+placeholder="Index">
+
+<button onclick="insertEnd()">
+
+<i class="fa-solid fa-plus"></i>
+
+Insert End
+
+</button>
+
+<button onclick="insertIndex()">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Insert Index
+
+</button>
+
+<button onclick="deleteIndex()">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete
+
+</button>
+
+<button onclick="updateValue()">
+
+<i class="fa-solid fa-pen"></i>
+
+Update
+
+</button>
+
+<button onclick="searchValue()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+<button onclick="traverseArray()">
+
+<i class="fa-solid fa-forward"></i>
+
+Traverse
+
+</button>
+
+<button onclick="reverseArray()">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+Reverse
+
+</button>
+
+<button onclick="randomArray()">
+
+<i class="fa-solid fa-dice"></i>
+
+Random
+
+</button>
+
+<button onclick="clearArray()">
+
+<i class="fa-solid fa-broom"></i>
+
+Clear
+
+</button>
+
+</section>
+
+<!--================ STATUS =================-->
+
+<div
+class="status"
+id="status">
+
+Ready...
+
+</div>
+
+<!--================ VISUALIZER =================-->
+
+<section class="visualizer">
+
+<div
+id="arrayContainer">
+
+</div>
+
+</section>
+
+
+<!--================ OPERATION INFO =================-->
+
+<section class="container">
+
+    <h2 class="section-title">
+
+        Array
+
+        <span>
+
+            Operations
+
+        </span>
+
+    </h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <h3>Insertion</h3>
+
+            <p>
+
+                Insert elements at the beginning,
+                end or any valid index.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-trash"></i>
+
+            <h3>Deletion</h3>
+
+            <p>
+
+                Delete an element using
+                its index position.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-pen"></i>
+
+            <h3>Updation</h3>
+
+            <p>
+
+                Replace the value
+                at any array index.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <h3>Searching</h3>
+
+            <p>
+
+                Search an element
+                using Linear Search.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ TIME COMPLEXITY =================-->
+
+<section class="complexity">
+
+<h2>
+
+Time Complexity
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Operation</th>
+
+<th>Best</th>
+
+<th>Average</th>
+
+<th>Worst</th>
+
+</tr>
+
+<tr>
+
+<td>Access</td>
+
+<td>O(1)</td>
+
+<td>O(1)</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Search</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Insertion</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+<tr>
+
+<td>Deletion</td>
+
+<td>O(1)</td>
+
+<td>O(n)</td>
+
+<td>O(n)</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!--================ IMPLEMENTATION =================-->
+
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select an operation to view its implementation.
+
+</pre>
+
+</section>
+
+<!--================ NAVIGATION =================-->
+
+<section
+class="container center mt-40">
+
+<a href="linear.html">
+
+<button>
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back
+
+</button>
+
+</a>
+
+&nbsp;&nbsp;
+
+<a href="../index.html">
+
+<button>
+
+<i class="fa-solid fa-house"></i>
+
+Home
+
+</button>
+
+</a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+<div class="container">
+
+<h2 class="glow">
+
+Array Visualizer
+
+</h2>
+
+<p>
+
+Interactive Learning Platform
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Data Structures Visualizer
+
+</p>
+
+</div>
+
+</footer>
+
+<!--================ SCRIPT =================-->
+
+<script src="../js/array.js"></script>
+
+</body>
+
+</html>

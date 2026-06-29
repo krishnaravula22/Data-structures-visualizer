@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Stack Visualizer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<span>
+
+Stack Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="number"
+id="stackValue"
+placeholder="Enter Value">
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+Stack
+
+<span>
+
+Visualizer
+
+</span>
+
+</h1>
+
+<p>
+
+Visualize every Stack operation
+using beautiful animations
+and understand the LIFO principle.
+
+</p>
+
+</section>
+
+<!--================ CONTROL PANEL ================-->
+
+<section class="control-panel">
+
+<button onclick="pushElement()">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+Push
+
+</button>
+
+<button onclick="popElement()">
+
+<i class="fa-solid fa-arrow-down"></i>
+
+Pop
+
+</button>
+
+<button onclick="peekElement()">
+
+<i class="fa-solid fa-eye"></i>
+
+Peek
+
+</button>
+
+<button onclick="stackSize()">
+
+<i class="fa-solid fa-ruler"></i>
+
+Size
+
+</button>
+
+<button onclick="isEmpty()">
+
+<i class="fa-solid fa-circle-question"></i>
+
+isEmpty
+
+</button>
+
+<button onclick="isFull()">
+
+<i class="fa-solid fa-circle-check"></i>
+
+isFull
+
+</button>
+
+<button onclick="clearStack()">
+
+<i class="fa-solid fa-trash"></i>
+
+Clear
+
+</button>
+
+</section>
+
+<div
+class="status"
+id="status">
+
+Stack Ready...
+
+</div>
+
+<section
+class="visualizer">
+
+<div
+class="stack-container"
+id="stackContainer">
+
+</div>
+
+</section>
+
+<!--================ TIME COMPLEXITY ================-->
+
+<section class="complexity">
+
+<h2>
+
+Time Complexity
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Operation</th>
+
+<th>Complexity</th>
+
+</tr>
+
+<tr>
+
+<td>Push</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Pop</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Peek</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Search</td>
+
+<td>O(n)</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!--================ CODE PANEL ================-->
+
+<section
+class="code-box">
+
+<pre
+id="codeDisplay">
+
+Select an operation...
+
+</pre>
+
+</section>
+
+
+
+<!--================ NAVIGATION =================-->
+
+<section class="container center mt-40">
+
+    <a href="linear.html">
+
+        <button>
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="../index.html">
+
+        <button>
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </button>
+
+    </a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <div class="container">
+
+        <h2 class="glow">
+
+            Stack Visualizer
+
+        </h2>
+
+        <p>
+
+            Learn Stack using interactive animations.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            LIFO (Last In First Out)
+
+        </p>
+
+        <br>
+
+        <p>
+
+            © 2026 Data Structures Visualizer
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ JAVASCRIPT =================-->
+
+<script src="../js/stack.js"></script>
+
+</body>
+
+</html>

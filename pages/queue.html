@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Queue Visualizer</title>
+
+<link rel="stylesheet"
+href="../css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ BACKGROUND =================-->
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!--================ NAVBAR =================-->
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-right-left"></i>
+
+<span>
+
+Queue Visualizer
+
+</span>
+
+</div>
+
+<div class="nav-right">
+
+<div class="search-box">
+
+<input
+type="number"
+id="queueValue"
+placeholder="Enter Value">
+
+</div>
+
+</div>
+
+</nav>
+
+<!--================ HERO =================-->
+
+<section class="hero">
+
+<h1>
+
+Queue
+
+<span>
+
+Visualizer
+
+</span>
+
+</h1>
+
+<p>
+
+Learn Queue operations visually using
+beautiful animations based on
+FIFO (First In First Out).
+
+</p>
+
+</section>
+
+<!--================ CONTROL PANEL =================-->
+
+<section class="control-panel">
+
+<button onclick="enqueue()">
+
+<i class="fa-solid fa-plus"></i>
+
+Enqueue
+
+</button>
+
+<button onclick="dequeue()">
+
+<i class="fa-solid fa-minus"></i>
+
+Dequeue
+
+</button>
+
+<button onclick="frontElement()">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Front
+
+</button>
+
+<button onclick="rearElement()">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+Rear
+
+</button>
+
+<button onclick="queueSize()">
+
+<i class="fa-solid fa-ruler"></i>
+
+Size
+
+</button>
+
+<button onclick="isEmpty()">
+
+<i class="fa-solid fa-circle-question"></i>
+
+isEmpty
+
+</button>
+
+<button onclick="isFull()">
+
+<i class="fa-solid fa-circle-check"></i>
+
+isFull
+
+</button>
+
+<button onclick="clearQueue()">
+
+<i class="fa-solid fa-trash"></i>
+
+Clear
+
+</button>
+
+</section>
+
+<!--================ STATUS =================-->
+
+<div
+class="status"
+id="status">
+
+Queue Ready...
+
+</div>
+
+<!--================ VISUALIZER =================-->
+
+<section class="visualizer">
+
+<div
+class="queue-container"
+id="queueContainer">
+
+</div>
+
+</section>
+
+<!--================ COMPLEXITY =================-->
+
+<section class="complexity">
+
+<h2>
+
+Time Complexity
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Operation</th>
+
+<th>Complexity</th>
+
+</tr>
+
+<tr>
+
+<td>Enqueue</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Dequeue</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Front</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Rear</td>
+
+<td>O(1)</td>
+
+</tr>
+
+<tr>
+
+<td>Search</td>
+
+<td>O(n)</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!--================ CODE PANEL =================-->
+
+<section class="code-box">
+
+<pre id="codeDisplay">
+
+Select any Queue operation...
+
+</pre>
+
+</section>
+
+<!--================ NAVIGATION =================-->
+
+<section class="container center mt-40">
+
+    <a href="linear.html">
+
+        <button>
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="../index.html">
+
+        <button>
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </button>
+
+    </a>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <div class="container">
+
+        <h2 class="glow">
+
+            Queue Visualizer
+
+        </h2>
+
+        <p>
+
+            Learn Queue using interactive animations.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            FIFO (First In First Out)
+
+        </p>
+
+        <br>
+
+        <p>
+
+            © 2026 Data Structures Visualizer
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ JAVASCRIPT =================-->
+
+<script src="../js/queue.js"></script>
+
+</body>
+
+</html>
